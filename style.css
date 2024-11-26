@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-list li:last-child {
+    border-bottom: none;
+}
+
+.total {
+    font-size: 1.5em;
+    margin-top: 20px;
+    text-align: right;
+}
+
+.checkout-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkout-button:hover {
+    background-color: #218838;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.back-button {
+    display: inline-block; /* Để nút không chiếm toàn bộ chiều rộng */
+    padding: 12px 20px; /* Tăng kích thước padding cho nút */
+    background-color: #007bff; /* Màu nền của nút */
+    color: white; /* Màu chữ */
+    border: none; /* Không có viền */
+    border-radius: 5px; /* Bo tròn góc */
+    font-size: 1.2em; /* Kích thước chữ */
+    cursor: pointer; /* Con trỏ chuột thành hình bàn tay khi di chuột qua nút */
+    text-align: center; /* Căn giữa chữ trong nút */
+    transition: background-color 0.3s, transform 0.3s; /* Hiệu ứng chuyển tiếp cho màu nền và kích thước */
+    margin-top: 10px; /* Khoảng cách giữa các nút */
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Màu nền khi di chuột qua */
+    transform: translateY(-2px); /* Nâng nút lên một chút khi di chuột qua */
+}
+
+.back-button:active {
+    transform: translateY(0); /* Đưa nút trở về vị trí ban đầu khi nhấn */
+}

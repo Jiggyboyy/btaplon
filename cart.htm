@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng</title>
+    <link rel="stylesheet" href="style.css"> <!-- Kết nối với file CSS -->
+    
+    
+    <script>
+        function displayCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartList = document.getElementById('cart-list');
+            let total = 0;
+
+            cartList.innerHTML = ''; // Xóa nội dung cũ
+
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.name} - ${item.price} VNĐ`;
+                cartList.appendChild(li);
+                total += item.price;
+            });
+
+            const totalElement = document.getElementById('total');
+            totalElement.textContent = `Tổng: ${total} VNĐ`;
+        }
+
+        window.onload = displayCart; // Gọi hàm khi trang được tải
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Giỏ Hàng</h1>
+    </header>
+    <main>
+        <ul id="cart-list" class="cart-list"></ul>
+        <h2 id="total" class="total">Tổng: 0 VNĐ</h2>
+        <button class="checkout-button" onclick="alert('Thanh toán thành công!')">Thanh Toán</button>
+        <button class="back-button" onclick="window.location.href='smaker.htm'">Quay lại trang chủ</button> <!-- Nút Quay lại -->
+    </main>
+    <footer>
+        <p>© 2023 Smaker Clothing. Tất cả các quyền được bảo lưu.</p>
+    </footer>
+</body>
+</html>
